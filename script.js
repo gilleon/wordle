@@ -45,6 +45,19 @@ function handleKeyPress(e) {
   }
 }
 
+function ensureFocus() {
+  const inputField = document.getElementById("keyboard-input");
+  if (document.activeElement !== inputField) {
+    inputField.focus();
+  }
+}
+
+document.addEventListener("click", ensureFocus);
+
+document.addEventListener("touchstart", function (e) {
+  ensureFocus();
+});
+
 function updateGrid() {
   for (let i = 0; i < 5; i++) {
     const tile = document.getElementById(`row-${currentRow}-tile-${i}`);

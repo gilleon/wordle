@@ -66,3 +66,21 @@ body {
   background-color: var(--absent-color);
   color: var(--text-color);
 }
+
+#keyboard-input {
+  position: fixed;
+  top: -10px;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+}
+
+@media (max-width: 600px) {
+  .tile {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+}
