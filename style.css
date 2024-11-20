@@ -1,0 +1,68 @@
+:root {
+  --font-family: Arial, sans-serif;
+  --background-color: #f0f0f0;
+  --tile-border-color: #d3d3d3;
+  --tile-width: 50px;
+  --tile-height: 50px;
+  --grid-gap: 5px;
+  --text-color: white;
+  --correct-color: #6aaa64;
+  --present-color: #c9b458;
+  --absent-color: #787c7e;
+}
+
+body {
+  font-family: var(--font-family);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  width: 300px;
+}
+
+.message {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, var(--tile-width));
+  grid-template-rows: repeat(6, var(--tile-height));
+  gap: var(--grid-gap);
+  justify-content: center;
+}
+
+.tile {
+  width: var(--tile-width);
+  height: var(--tile-height);
+  border: 1px solid var(--tile-border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #ffffff;
+  text-transform: uppercase;
+}
+
+.correct {
+  background-color: var(--correct-color);
+  color: var(--text-color);
+}
+
+.present {
+  background-color: var(--present-color);
+  color: var(--text-color);
+}
+
+.absent {
+  background-color: var(--absent-color);
+  color: var(--text-color);
+}
